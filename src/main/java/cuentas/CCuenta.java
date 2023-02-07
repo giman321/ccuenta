@@ -1,5 +1,10 @@
 package cuentas;
 
+/**
+ * Clase para realizar ingresos o retiradas de saldo
+ * @author Jaime Antonio Sánchez Peso
+ * @version 1.0
+ */
 public class CCuenta {
 
 
@@ -8,10 +13,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Constructor sin parámetros
+     */
     public CCuenta()
     {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -19,11 +34,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * Para ver el saldo actual
+     * @return Saldo
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+     /**
+      * Suma la cantidad al saldo actual 
+     * @param cantidad importe a ingresar
+     * @throws java.lang.Exception cuando cantidad es negativa
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -31,6 +55,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Resta la cantidad al saldo actual 
+     * @param cantidad importe a retirar
+     * @throws java.lang.Exception cuando cantidad es negativa Y saldo insuficiente 
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -41,6 +70,7 @@ public class CCuenta {
     }
 
     /**
+     * Getter nombre
      * @return the nombre
      */
     public String getNombre() {
@@ -48,6 +78,7 @@ public class CCuenta {
     }
 
     /**
+     * Setter nombre
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
@@ -55,6 +86,7 @@ public class CCuenta {
     }
 
     /**
+     * Getter cuenta
      * @return the cuenta
      */
     public String getCuenta() {
@@ -62,6 +94,7 @@ public class CCuenta {
     }
 
     /**
+     * Setter cuenta
      * @param cuenta the cuenta to set
      */
     public void setCuenta(String cuenta) {
@@ -69,6 +102,7 @@ public class CCuenta {
     }
 
     /**
+     * Getter saldo
      * @return the saldo
      */
     public double getSaldo() {
@@ -76,6 +110,7 @@ public class CCuenta {
     }
 
     /**
+     * Setter saldo
      * @param saldo the saldo to set
      */
     public void setSaldo(double saldo) {
@@ -83,6 +118,7 @@ public class CCuenta {
     }
 
     /**
+     * Getter tipoInterés
      * @return the tipoInterés
      */
     public double getTipoInterés() {
@@ -90,6 +126,7 @@ public class CCuenta {
     }
 
     /**
+     * Setter tipoInterés
      * @param tipoInterés the tipoInterés to set
      */
     public void setTipoInterés(double tipoInterés) {
