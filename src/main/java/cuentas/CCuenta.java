@@ -21,11 +21,12 @@ public class CCuenta {
     }
 
     /**
-     *
-     * @param nom
-     * @param cue
-     * @param sal
-     * @param tipo
+     * Constructo con parámetros
+     * @param nom - nombre
+     * @param cue - cuenta
+     * @param sal - saldo
+     * @param tipo - tipo
+
      */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
@@ -36,7 +37,7 @@ public class CCuenta {
 
     /**
      * Para ver el saldo actual
-     * @return Saldo
+     * @return Saldo - importe saldo actual
      */
     public double estado()
     {
